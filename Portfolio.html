@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Developer Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css">
+
+  
+</head>
+
+<body>
+
+  <!-- Navigation -->
+
+<nav>
+  
+  <!-- Logo Area -->
+  <div class="logo-container">
+    
+    <!-- Change logo.png with your own image -->
+    <img src="Logo.png" alt="Logo" id="logo">
+
+    <h2>MyPortfolio</h2>
+  </div>
+
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+  </ul>
+
+</nav>
+
+  <!-- Hero Section -->
+  <header>
+    <div class="hero">
+      <h1>Hello, <span>I'm Immanuel</span></h1>
+
+      <p>
+        I am a 
+        <span id="typing"></span>
+      </p>
+
+      <a href="#about" class="btn">Explore More</a>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about">
+
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1974&auto=format&fit=crop" alt="Developer">
+
+      <div class="about-text">
+        <p>
+          I am a passionate Website Developer and Security Analyst with strong experience in creating modern websites and analyzing security systems.
+        </p>
+
+        <br>
+
+        <p>
+          I specialize in designing responsive websites using HTML, CSS, JavaScript and modern technologies. 
+          I also focus on cybersecurity, vulnerability assessment, and protecting systems from cyber threats.
+        </p>
+
+        <br>
+
+        <p>
+          My goal is to combine creativity and security to build fast, beautiful, and secure digital experiences.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2 class="section-title">My Skills</h2>
+
+    <div class="skills">
+
+      <div class="skill-card">
+        <h3>Website Development</h3>
+        <p>
+          Building responsive and modern websites using HTML, CSS, JavaScript and frontend technologies.
+        </p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Cyber Security</h3>
+        <p>
+          Security analysis, ethical hacking basics, vulnerability testing and network security.
+        </p>
+      </div>
+
+      <div class="skill-card">
+        <h3>UI/UX Design</h3>
+        <p>
+          Creating attractive user interfaces and smooth user experiences for web applications.
+        </p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Problem Solving</h3>
+        <p>
+          Solving technical issues and developing efficient digital solutions.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects">
+
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1887&auto=format&fit=crop">
+
+        <div class="project-content">
+          <h3>Portfolio Website</h3>
+          <p>
+            A responsive personal portfolio website designed using HTML, CSS and JavaScript.
+          </p>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=2070&auto=format&fit=crop">
+
+        <div class="project-content">
+          <h3>Security Dashboard</h3>
+          <p>
+            A cyber security monitoring dashboard for analyzing threats and network activity.
+          </p>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop">
+
+        <div class="project-content">
+          <h3>Business Website</h3>
+          <p>
+            Developed a modern business website with clean UI and responsive design.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Immanuel | Website Developer & Security Analyst</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const words = [
+      "Website Developer",
+      "Security Analyst",
+      "Frontend Designer",
+      "Cyber Security Enthusiast"
+    ];
+
+    let wordIndex = 0;
+    let charIndex = 0;
+    let currentWord = "";
+    let currentChar = "";
+
+    const typing = document.getElementById("typing");
+
+    function type() {
+      if (wordIndex < words.length) {
+
+        currentWord = words[wordIndex];
+        currentChar = currentWord.slice(0, ++charIndex);
+
+        typing.textContent = currentChar;
+
+        if (currentChar.length == currentWord.length) {
+          wordIndex++;
+          charIndex = 0;
+
+          setTimeout(type, 1200);
+
+          if (wordIndex == words.length) {
+            wordIndex = 0;
+          }
+
+        } else {
+          setTimeout(type, 120);
+        }
+      }
+    }
+
+    type();
+  </script>
+
+</body>
+</html>
+```
