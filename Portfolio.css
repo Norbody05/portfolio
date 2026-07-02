@@ -141,6 +141,19 @@
       box-shadow:0 0 20px goldenrod;
     }
 
+    .ICDL {
+      display:inline-block;
+      padding: 10px 20px;
+      background-color: gold;
+      color : black;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      border: 10px solid gold;
+      font-weight: bold;
+
+    }
+
     .about-text p{
       line-height:1.8;
       color:#cbd5e1;
